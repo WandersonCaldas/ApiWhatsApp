@@ -1,8 +1,13 @@
-﻿namespace src.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace src.Model
 {
     public class WhatsAppMessage
     {
-        public string? To { get; set; }
-        public string? Body { get; set; }
+        [Required]
+        public string To { get; set; } = "";
+
+        [Required]
+        public string Body { get; set; } = "";
     }
 }
